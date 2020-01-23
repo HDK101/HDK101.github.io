@@ -24,6 +24,7 @@ p {
 body {
   background-color: rgb(49, 19, 77);
 }
+
 header {
   background: linear-gradient(145deg, #6d1ab9, #5f0077);
   height: auto;
@@ -32,7 +33,45 @@ header {
   width: 100%;
   box-shadow: 10px 10px 10px rgba(35, 5, 39, 0.568);
 }
-/*CLASS*/
+footer {
+  display: flex;
+  margin-top: 50px;
+  background: linear-gradient(145deg, #1a063e, #4d0088);
+  height: auto;
+  min-height: 100px;
+  font-family: "Roboto Mono", monospace;
+  width: 100%;
+  box-shadow: -10px -10px 10px rgba(149, 29, 165, 0.349);
+  color: white;
+}
+/*
+IDS
+*/
+#mainContainer {
+  width: 100%;
+  position: absolute;
+}
+#introContainer {
+  background-color: black;
+  height: 100vh;
+  position: relative;
+  animation: introfadein 4s 1;
+}
+
+@keyframes introfadein {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/*
+CLASS
+*/
 
 /*
 _UL_
@@ -40,6 +79,7 @@ _UL_
 
 .ul__nav {
   list-style-type: none;
+  padding: 0px;
 }
 
 /*
@@ -48,7 +88,7 @@ _LI_
 
 .li__nav {
   height: 50px;
-  float: right;
+  float: left;
 }
 
 /*
@@ -89,9 +129,6 @@ _DIV_
     -5px -5px 20px rgba(149, 29, 165, 0.349);
   color: rgba(255, 255, 255, 1);
 }
-.div__intro {
-  flex-direction: column;
-}
 .div--white {
   background-color: white;
 }
@@ -100,36 +137,46 @@ _DIV_
 }
 .div__information {
   overflow: hidden;
-  display: flex;
   flex-direction: column;
-  align-items: center;
   width: 100%;
   border-radius: 5px;
   margin: 30px;
 }
 .div__profiles {
-  display: flex;
-  align-items: center;
   height: 300px;
   width: 100%;
   border-radius: 5px;
   margin: 30px;
 }
 .div__container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  position: relative;
   justify-content: center;
-
   font-family: "Roboto Mono", monospace;
   height: auto;
+}
+/*
+=CONTAINER= ANIM
+*/
+@keyframes containerfade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 .div__languages {
   display: flex;
   align-items: center;
 }
+
 .div--flex_columns {
   flex-direction: column;
+}
+.div--flex_center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /*
@@ -151,6 +198,10 @@ _H1_
   margin: 20px;
 }
 
+.h1__aboutme {
+  font-size: 48px;
+}
+
 /*
 _SVG_
 */
@@ -163,6 +214,10 @@ _SVG_
   width: 50vw;
   min-width: 320px;
   height: auto;
+}
+.svg__logo {
+  width: 120px;
+  height: 25px;
 }
 .svg--square {
   height: 100px;
@@ -185,6 +240,18 @@ _IMG_
 /*
 _P_
 */
+.p__aboutme {
+  font-size: 24px;
+  text-align: center;
+  margin: 20px 80px 20px;
+}
+
+.p__languages {
+  font-size: 16px;
+  text-align: center;
+  margin: 20px;
+}
+
 .p__info {
   margin: 20px;
 }
@@ -211,7 +278,6 @@ _MEDIA_
   .a__profiles:hover {
     color: rgb(255, 255, 255);
   }
-
   .div__box {
     margin: 70px 0 20px 0;
     width: 90vw;
@@ -253,7 +319,6 @@ _MEDIA_
   .a__profiles {
     color: rgba(255, 255, 255, 1);
   }
-  
 
   .li__nav {
     width: 100%;
