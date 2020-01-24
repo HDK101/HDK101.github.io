@@ -169,6 +169,10 @@ _DIV_
   display: flex;
   align-items: center;
 }
+.div__language {
+  display: flex;
+  align-items: center;
+}
 
 .div--flex_columns {
   flex-direction: column;
